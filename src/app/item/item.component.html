@@ -1,0 +1,7 @@
+<div>
+  <input type="checkbox" class="todo-checkbox" (click)="completeItem()"/>
+  <span class="todo-title" [ngClass]="{'todo-complete': isComplete}">
+    {{ todoItem.title }}
+  </span>
+    <button (click)="removeItem()" class="btn btn-outline-danger float" style="float: right;">Delete</button>
+</div>

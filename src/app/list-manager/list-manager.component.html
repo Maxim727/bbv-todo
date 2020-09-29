@@ -1,0 +1,13 @@
+<div class="jumbotron canvas todo-app"  >
+  <h3 class="text-center">What have you planned?</h3>
+  <app-input (submit)="addItem($event)">
+  </app-input>
+</div>
+
+    <ul class="list-group ">
+      <li class="list-group-item " *ngFor="let item of todoList">
+        <!-- {{item.title}}
+        <button (click)="removeItem()" class="btn btn-outline-danger float" style="float: right;">Delete</button> -->
+        <app-item [todoItem]="item" (remove)="removeItem($event)"></app-item>
+      </li>
+    </ul>
